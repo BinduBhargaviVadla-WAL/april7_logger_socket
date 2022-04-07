@@ -8,7 +8,9 @@ function SocketDemo() {
     setSocket(socketIOClient(API_ENDPOINT));
     const destructFunction = () => {
       console.log(socket);
-      socket.disconnect();
+      if (socket) {
+        socket.disconnect();
+      }
       alert("component removed");
     };
     return destructFunction;

@@ -5,17 +5,32 @@ const socketIo = require("socket.io");
 const port = 3001;
 const app = express();
 //dev prints in color logs.
+app.use(logger("this is dev logger"));
 app.use(logger("dev"));
+
 //covers all info
+app.use(logger("this is combined logger"));
 app.use(logger("combined"));
+
 //tiny mssg
+app.use(logger("this is tiny logger"));
 app.use(logger("tiny"));
+
+app.use(logger("this is short logger"));
 app.use(logger("short"));
+
 //with time it prints generally
+app.use(logger("this is common logger"));
 app.use(logger("common"));
 
+app.use(
+  logger(
+    "My Logger\nstatus-:status\nmethod-:method\nurl-:url\ncontent-length-:res[content-length]\ntime-:response-time ms"
+  )
+);
+
 app.get("/", function (req, res) {
-  res.send("hello, world!");
+  res.send("hello, This is morgan logger Example");
 });
 
 const server = http.createServer(app);
