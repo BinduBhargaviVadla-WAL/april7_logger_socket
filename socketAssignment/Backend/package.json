@@ -1,0 +1,21 @@
+{
+  "name": "socketapp",
+  "version": "1.2.1",
+  "description": "socketapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "socket",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "socket"
+  ],
+  "author": "bindu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.1"
+  }
+}
