@@ -11,11 +11,11 @@ function App() {
         <div className='nav fluid-container bg-dark'>
           <div className='row w-100 p-2 m-2'>
             <Link activeClassName='active' className='link-ele' to='/'>
-              <button>Home</button>
+              <button className='home-link'>Home</button>
             </Link>
 
             <Link activeClassName='active' className='link-ele' to='/socket'>
-              <button>Socket Connection</button>
+              <button className='socket-link'>Socket Connection</button>
             </Link>
           </div>
         </div>
